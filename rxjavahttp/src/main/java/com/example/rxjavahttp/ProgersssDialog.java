@@ -17,25 +17,16 @@ public class ProgersssDialog extends Dialog {
 
     public ProgersssDialog(Context context) {
         super(context, R.style.MyHttpProgressDiaLog);
-        if (Build.VERSION.SDK_INT>=28) {//8.0新特性 改了代码竟然不是别 卧槽
+        if (Build.VERSION.SDK_INT >= 26) {
             this.getWindow().setType(WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY);
-        }else{
+        } else {
             this.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
         }
         this.mContext = context;
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // cesh    是不是  要先把这里提交了啊   要不要全部删除了再来一遍 git的仓库也删除了
-        //等我在看看   不行就删除了  重新绑定一下git 我试试   这里还没关联git呢
-
-
-        
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.progress_dialog);
         setCancelable(false);
@@ -45,11 +36,11 @@ public class ProgersssDialog extends Dialog {
         img.setAnimation(anim);
     }
 
-    public void showDia(){
+    public void showDia() {
         this.show();
     }
 
-    public void dismissDia(){
+    public void dismissDia() {
         this.dismiss();
     }
 

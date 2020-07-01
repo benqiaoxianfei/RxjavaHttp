@@ -30,6 +30,7 @@ public class ProgersssDialog extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         // cesh    是不是  要先把这里提交了啊   要不要全部删除了再来一遍 git的仓库也删除了
         //等我在看看   不行就删除了  重新绑定一下git 我试试   这里还没关联git呢
+        
 
 
 
